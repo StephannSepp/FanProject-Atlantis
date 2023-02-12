@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _("2023 Gawr Gura 生日公車") }}{% endblock title %}
+
+{% block meta %}
+<meta property="og:title" content="Gawr Gura 2023 生日企劃">
+<meta property="og:description" content="Gawr Gura 2023 年生日企劃，由亞特蘭提斯企劃組主辦...亞特蘭提斯企劃組是由 Hololive English -Myth- 旗下的 Vtuber 藝人 Gawr Gura 粉絲 Discord 群「🔱亞特蘭提斯🦈」組成的活動企劃組。">
+{% endblock meta %}
+
+{% block stylesheets %}
+<link href="/static/css/timeline.css" rel="stylesheet" />
+<link href="{{url_for('project.static', filename='css/project.css')}}" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="container-lg container-fluid pt-4">
+  <section class="row text-center" id="description">
+    <h1 class="text-center fw-bold">{{ _("企劃概述") }}</h1>
+    <p>{{ _("是的!我們又回來了，我們是 2022 年舉辦鯊鯊公車廣告活動的亞特蘭提斯企劃組。") }}</p>
+    <p>{{ _("今年度的生日活動我們將擴大規模，擬定彩繪列車作為這次的目標，並將致力邀請知名繪師參與設計。") }}</p>
+    <p>{{ _("為了實現如此大規模的活動，需要各位蝦蝦給予支持與鼓勵，我們誠摯邀請來自各地的 Chumbuds 參與這次活動。") }}</p>
+  </section> <!-- section.row -->
+
+  <hr class="divider" />
+
+  <section class="text-center" id="state">
+    <h1 class="text-center fw-bold">{{ _("企劃現況") }}</h1>
+    <p class="pt-3">{{ _("意願調查中。") }}</p>
+
+    <!--<button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#timelines">點我展開時間軸</button>-->
+    <div class="container pt-3 text-start" id="timelines">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <ul class="timeline">
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">{{ _("開始籌畫") }}</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>October 23, 2022</span>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">{{ _("意願調查") }}</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>March 14, 2023</span>
+              <p class="text-small mt-2">{{ _("此次意願調查將決定火車企劃是否可行。") }}</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div> <!-- div#timelines -->
+  </section> <!-- section -->
+</div> <!-- div.contanier -->
+{% endblock content %}

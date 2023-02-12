@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _("隱私權政策") }}{% endblock title %}
+
+{% block meta %}
+<meta property="og:title" content="隱私權政策">
+<meta property="og:description" content="亞特蘭提斯企劃組網站之隱私權政策">
+{% endblock meta %}
+
+{% block stylesheets %}
+<link href="/static/css/timeline.css" rel="stylesheet" />
+<link href="{{url_for('project.static', filename='css/project.css')}}" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="container-lg container-fluid pt-4">
+  <h1>{{ _("隱私權政策") }}</h1>
+  <h3>{{ _("隱私權政策適用範圍") }}</h3>
+  <ul>
+    <li><p>{{ _("隱私權保護政策內容，適用於以「fanproject-atlantis.com」網域為原則之網站（以下稱本網站）。不適用於經由本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。") }}</p></li>
+  </ul>
+  <h3>{{ _("資料蒐集、處理及利用方式") }}</h3>
+  <ul>
+    <li><p>{{ _("一般瀏覽之情況：本網站會自動產生相關瀏覽紀錄，包含連線設備 IP 地址、使用時間、使用的瀏覽器及請求的資源。") }}</p></li>
+    <li><p>{{ _("主動以 Discord 登入之情況：本網站使用 Disocrd OAuth 2.0 API 驗證 Disocrd 帳號，本網站僅記錄使用者 UID、使用者名稱、頭像作為登入資訊儲存，此登入資訊將於登出網站時自動清除，本網站不會、也不能儲存您在 Disocrd 上的密碼。") }}</p></li>
+    <li><p>{{ _("主動使用本網站留言等功能之情況：本網站會將使用者 UID、使用者名稱、頭像基本資訊儲存至資料庫。") }}</p></li>
+    <li><p>{{ _("活動所需提供個人實名資料之情況：本網站將不會紀錄完整個人資料，資料存入時將自動刪除部分資訊，因活動金流或其他需求會將部分實名資料展示於本網站上，如匯款帳號末五碼及姓名首字等。") }}</p></li>
+  </ul>
+  <h3>{{ _("資料保護") }}</h3>
+  <ul>
+    <li><p>{{ _("本網站之資料僅能由網站管理員及亞特蘭提斯企劃組管理方存取，絕對不會提供、交換、出租或販售至第三方使用。") }}</p></li>
+  </ul>
+  <h3>{{ _("Cookie 使用") }}</h3>
+  <ul>
+    <li><p>{{ _("為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的 Cookie，若您不願接受 Cookie 的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕 Cookie 的寫入，但可能會導致網站某些功能無法正常執行。") }}</p></li>
+  </ul>
+  <h3>{{ _("隱私權政策修正") }}</h3>
+  <ul>
+    <li><p>{{ _("本網站隱私權保護政策將因應需求隨時進行修正。") }}</p></li>
+  </ul>
+</div> <!-- div.contanier -->
+{% endblock content %}

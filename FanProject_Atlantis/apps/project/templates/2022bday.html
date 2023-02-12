@@ -1,0 +1,297 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _("2022 Gawr Gura 生日公車") }}{% endblock title %}
+
+{% block meta %}
+<meta property="og:title" content="Gawr Gura 2022 生日公車企劃">
+<meta property="og:description" content="由 Gawr Gura 粉絲 Discord 群「🔱亞特蘭提斯🦈」舉辦的 Gawr Gura 2022 生日公車企劃活動頁面">
+<meta property="og:image" content="{{url_for('project.static', filename='img/2022/5c4035eb7df2f5e8d088cb2c0f360cd5.webp')}}" />
+{% endblock meta %}
+
+{% block stylesheets %}
+<link href="/static/css/timeline.css" rel="stylesheet" />
+<link href="{{url_for('project.static', filename='css/project.css')}}" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="container-lg container-fluid pt-4">
+  <section class="row text-center" id="description">
+    <h1 class="text-center fw-bold">企劃概述</h1>
+    <p>即將再度來臨的這個 6 月 20 日是個重要的日子，沒錯就是我們最可愛的鯊鯊 Gawr Gura 的二周年生日，在如此值得慶祝的日子，我們將為各位帶來噶嗚·古拉 Gawr Gura 二周年生日祝賀活動🎉🎉</p>
+    <p>活動將於 6/1～6/30 之期間內讓 Gura 的公車與各位 Chumbuds 見面，如同粉絲見面會一般的體驗。</p>
+    <p>本次的企劃所需的構圖，我們很榮幸請到了「00魚」、「鯊魚咬尾巴」、「Hirotaka」、「たま・TAMA」四位老師來進行三台不同路線的公車構圖！</p>
+  </section> <!-- section#description.row -->
+
+  <hr class="divider" />
+
+  <section class="text-center" id="state">
+    <h1 class="text-center fw-bold">企劃現況</h1>
+    <p><span class="h5 text-danger">■</span>企劃組吸收: 13,300 新台幣</p>
+    <div class="progress">
+      <div class="progress-bar progress-bar-striped" role="progressbar" style="width: 36%">
+        <span class="d-lg-block d-none">募資意願金額: 67,600 新台幣</span>
+        <span class="d-lg-none d-block">意願: 67.6K NTD</span>
+      </div>
+      <div class="progress-bar" role="progressbar" style="width: 95%">
+        <span class="d-lg-block d-none">實際募資金額: 172,800 NTD</span>
+        <span class="d-block d-lg-none">實際募資: 172.8K NTD</span>
+      </div>
+      <div class="progress-bar bg-danger" role="progressbar" style="width: 5%"></div>
+    </div>
+    <p class="pt-3">意願調查時宣傳不佳，金額僅做為參考。應募品、運費部分超出 13,300 新台幣由企劃組成員吸收。</p>
+    <p>企劃已完成，6輛公車皆於 2022/06/01 正式上路，持續至最後一輛公車台中 33，車牌 FAE-061 於 2022/07/12 卸下彩繪。</p>
+    <p>應募品最後於 2022/08/31 全數寄出，於 2022/09/11 確認沒有遺漏，企劃完成。</p>
+
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#timelines">點我展開時間軸</button>
+    <div class="container pt-3 text-start collapse" id="timelines">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <ul class="timeline">
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">開始籌畫</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>January 13, 2022</span>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">募款意願民調</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>March 14, 2022</span>
+              <p class="text-small mt-2">此次意願調查將決定公車路線及班次、以及繪師。</p>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">企劃正式開始</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>March 22, 2022</span>
+              <p class="text-small mt-2">邀請到「00魚」、「鯊魚咬尾巴」、「Hirotaka」三位繪師進行構圖，並初步決定於台北、台中、高雄各一班次進行彩繪。</p>
+              <p class="text-small mt-2">募款期間為 3/31 至 4/30，並有由三位繪師所設計的應募品周邊作為回饋。</p>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">設計圖公開</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>April 25, 2022</span>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">公車構圖完成</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>May 11, 2022</span>
+              <p class="text-small mt-2">最終募款結果可製作五個班次，共計 8 面。</p>
+              <p class="text-small mt-2">加碼第四位繪師「たま・TAMA」，以投票方式決定各路線其中一面的用圖。</p>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">公車用圖結果出爐</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>May 15, 2022</span>
+              <p class="text-small mt-2">投票結果出爐：</p>
+              <p class="text-small mt-2">
+                台北:<br />
+                652(雙面)車門面:00魚，司機面:たま・TAMA<br />
+                307(單面)車門面:Hirotaka<br />
+                <br />
+                台中:<br />
+                35(雙面)車門面:Hirotaka，司機面:00魚<br />
+                33(單面)車門面:たま・TAMA<br />
+                <br />
+                高雄:<br />
+                90(雙面)車門面:鯊魚咬尾巴，司機面:たま・TAMA<br />
+                90(單面)車門面:00魚
+              </p>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">公車正式上路</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>June 1, 2022</span>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">公車全數卸下彩繪</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>July 12, 2022</span>
+              <p class="text-small mt-2">最後一輛公車台中 33，車牌 FAE-061 卸下彩繪。</p>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">應募品製作完成</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>July 14, 2022</span>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">鈔能力蝦應募品開始發送</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>August 10, 2022</span>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">一般蝦應募品開始發送</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>August 31, 2022</span>
+            </li>
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">企劃正式結束</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>September 18, 2022</span>
+              <p class="text-small mt-2">已確認所有應募品送達。</p>
+            </li>
+          </ul>
+        </div> <!-- div.col-8.mx-auto -->
+      </div> <!-- div.row -->
+    </div> <!-- div#timelines -->
+  </section> <!-- section#state -->
+
+  <hr class="divider" />
+
+  <section class="row text-center" id="posters">
+    <h1 class="text-center fw-bold">宣傳單</h1>
+    <div class="col-lg-4 text-center">
+      <img class="showcase-preview" src="{{url_for('project.static', filename='img/2022/921e0a2ef78affe9fa98e46581a691e3597acce9.webp')}}" loading="lazy" onclick="showModal(this)" alt="台北宣傳單" style="width:100%">
+      <h4 class="pt-3"><i class="bi bi-bus-front-fill"></i> 台北 652｜車牌342-U3</h4>
+      <div class="h5 text-muted">
+        <a class="bi bi-twitter stroke-light" href="https://twitter.com/lydia601303041" target="_blank" style="color: #1DA1F2;"></a> 車門面：00魚<br />
+        <i class="bi bi-palette-fill"></i> 司機面：たま・TAMA<br />
+      </div>
+      <h4 class="pt-3"><i class="bi bi-bus-front-fill"></i> 台北 307｜車牌861-FR</h4>
+      <div class="h5 text-muted">
+        <a class="bi bi-twitter stroke-light" href="https://twitter.com/hirotaka0125" target="_blank" style="color: #1DA1F2;"></a> 車門面：Hirotaka<br />
+      </div>
+    </div> <!-- div.col-lg-4 .text-center-->
+
+    <div class="col-lg-4 text-center pt-lg-0 pt-5">
+      <img class="showcase-preview" src="{{url_for('project.static', filename='img/2022/9a2b6d194523df979ceeae18bda13802534ad0f5.webp')}}" loading="lazy" onclick="showModal(this)" alt="台中宣傳單" style="width:100%">
+      <h4 class="pt-3"><i class="bi bi-bus-front-fill"></i> 台中 35｜車牌197-U8</h4>
+      <div class="h5 text-muted">
+        <a class="bi bi-twitter stroke-light" href="https://twitter.com/hirotaka0125" target="_blank" style="color: #1DA1F2;"></a> 車門面：Hirotaka<br />
+        <a class="bi bi-twitter stroke-light" href="https://twitter.com/lydia601303041" target="_blank" style="color: #1DA1F2;"></a> 司機面：00魚<br />
+      </div>
+      <h4 class="pt-3"><i class="bi bi-bus-front-fill"></i> 台中 33｜車牌FAE-061</h4>
+      <div class="h5 text-muted">
+        <i class="bi bi-palette-fill"></i> 車門面：たま・TAMA<br>
+      </div>
+    </div> <!-- div.col-lg-4 .text-center-->
+
+    <div class="col-lg-4 text-center pt-lg-0 pt-5">
+      <img class="showcase-preview" src="{{url_for('project.static', filename='img/2022/f03ff0566edada530d1164a868484c51690c2a46.webp')}}" loading="lazy" onclick="showModal(this)" alt="高雄宣傳單" style="width:100%">
+      <h4 class="pt-3"><i class="bi bi-bus-front-fill"></i> 高雄 90｜車牌779-FP</h4>
+      <div class="h5 text-muted">
+        <a class="bi bi-twitter stroke-light" href="https://twitter.com/SharkBiteTail" target="_blank" style="color: #1DA1F2;"></a> 車門面：鯊魚咬尾巴<br>
+        <i class="bi bi-palette-fill"></i> 司機面：たま・TAMA<br />
+      </div>
+
+      <h4 class="pt-3"><i class="fa fa-bus"></i> 高雄 90｜車牌665-FP</h4>
+      <div class="h5 text-muted">
+        <a class="bi bi-twitter stroke-light" href="https://twitter.com/lydia601303041" target="_blank" style="color: #1DA1F2;"></a> 車門面：00魚<br>
+      </div>
+    </div> <!-- div.col-lg-4 .text-center-->
+  </section> <!-- section#posters -->
+
+  <hr class="divider" />
+
+  <section class="row text-center" id="images">
+    <h1 class="text-center fw-bold">公車實照</h1>
+    <div class="col-lg-4 pt-3">
+      <img class="showcase-preview" src="{{url_for('project.static', filename='img/2022/ee9e2a9f65ba49dd405c735e8c2bafaeb55d3e49.webp')}}" alt="高雄 90｜779-FP｜鯊魚咬尾巴" loading="lazy" onclick="showModal(this)" style="aspect-ratio: 16/10">
+    </div>
+    <div class="col-lg-4 pt-3">
+      <img class="showcase-preview" src="{{url_for('project.static', filename='img/2022/5f7bca1ea8f6950c1a2d4d674d2871fdb5ba8741.webp')}}" alt="高雄 90｜779-FP｜たま・TAMA" loading="lazy" onclick="showModal(this)" style="aspect-ratio: 16/10">
+    </div>
+    <div class="col-lg-4 pt-3">
+      <img class="showcase-preview" src="{{url_for('project.static', filename='img/2022/8b3ca6b46667571b2ff406c4391cfec25f7c635d.webp')}}" alt="台中 33｜FAE-061｜たま・TAMA" loading="lazy" onclick="showModal(this)" style="aspect-ratio: 16/10">
+    </div>
+    <div class="col-lg-4 pt-3">
+      <img class="showcase-preview" src="{{url_for('project.static', filename='img/2022/955b05173dfee4a449e4c1c260bf73ef2b9d7c15.webp')}}" alt="高雄 90｜665-FP｜00魚" loading="lazy" onclick="showModal(this)" style="aspect-ratio: 16/10">
+    </div>
+    <div class="col-lg-4 pt-3">
+      <img class="showcase-preview" src="{{url_for('project.static', filename='img/2022/f72c8b76d36d8d0ac4e7fa0ba13cbf24b35aaab1.webp')}}" alt="台中 35｜197-U8｜00魚" loading="lazy" onclick="showModal(this)" style="aspect-ratio: 16/10">
+    </div>
+    <div class="col-lg-4 pt-3">
+      <img class="showcase-preview" src="{{url_for('project.static', filename='img/2022/19b0e1c010646c2ed6c0339aec6ee42a1e64d701.webp')}}" alt="台中 35｜197-U8｜Hirotaka" loading="lazy" onclick="showModal(this)" style="aspect-ratio: 16/10">
+    </div>
+  </section> <!-- section#images -->
+
+  <hr class="divider" />
+
+  <section class="row text-center" id="rewardGifts">
+    <h1 class="text-center fw-bold">一般應募品</h1>
+    <div class="col-lg-6 pt-lg-3">
+      <p><b><i class="bi bi-gift-fill"></i>明信片</b></p>
+      <p>4 種款式由繪師「00魚」、「鯊魚咬尾巴」、「hirotaka」、「たま・TAMA」繪製。</p>
+      <img src="{{url_for('project.static', filename='img/2022/a4c8e0e7dc1ae01d18bc9bc51531f00d0ef89a7f.webp')}}" alt="明信片" style="width: 100%;">
+    </div>
+
+    <div class="col-lg-6 pt-lg-3 pt-5">
+      <p><b><i class="bi bi-gift-fill"></i>硅藻土杯墊</b></p>
+      <p>由繪師「00魚」繪製。</p>
+      <img src="{{url_for('project.static', filename='img/2022/e9fe47cdac24b04b200a370488325a077d3fde7d.webp')}}" alt="硅藻土杯墊" style="width: 100%;">
+    </div>
+
+    <hr class="divider" />
+
+    <h1 class="text-center fw-bold">鈔能力蝦應募品</h1>
+    <p>包含以上一般應募品</p>
+    <div class="col-lg-6 col-12 pt-lg-3 mx-auto">
+      <p><b><i class="bi bi-gift-fill"></i>帆布文創手提袋</b></p>
+      <p>由繪師「00魚」繪製。</p>
+      <img src="{{url_for('project.static', filename='img/2022/1b3ede1a8894ba9b8e14c66e41d872fdafcb6a06.webp')}}" alt="帆布文創手提袋" style="width: 100%;">
+    </div>
+
+    <hr class="divider" />
+
+    <div class="col-lg-6 pt-lg-3">
+      <p><b><i class="bi bi-gift-fill"></i>90×40×2.5cm桌墊</b></p>
+      <p>由繪師「00魚」繪製。4 款桌墊中自選一款圖案款式。</p>
+      <img src="{{url_for('project.static', filename='img/2022/6ed023eb91dee5eb7e70566aacdd52b9b56b14cd.webp')}}" alt="桌墊" style="width: 100%;">
+    </div>
+
+    <div class="col-lg-6 pt-lg-3 pt-5">
+      <p><b><i class="bi bi-gift-fill"></i>60×35×2.5cm桌墊</b></p>
+      <p>由繪師「鯊魚咬尾巴」繪製。4 款桌墊中自選一款圖案款式。</p>
+      <img src="{{url_for('project.static', filename='img/2022/9258b65b8e94f2cdd2b7e437bcfa4a6e7708db53.webp')}}" alt="桌墊" style="width: 100%;">
+    </div>
+
+    <div class="col-lg-6 pt-lg-3 pt-5">
+      <p><b><i class="bi bi-gift-fill"></i>60×35×2.5cm桌墊</b></p>
+      <p>由繪師「hirotaka」繪製。4 款桌墊中自選一款圖案款式。</p>
+      <img src="{{url_for('project.static', filename='img/2022/cf27eedbdd87945ddd214c2108d1430dbd82fa44.webp')}}" alt="桌墊" style="width: 100%;">
+    </div>
+
+    <div class="col-lg-6 pt-lg-3 pt-5">
+      <p><b><i class="bi bi-gift-fill"></i>60×35×2.5cm桌墊</b></p>
+      <p>由繪師「たま・TAMA」繪製。4 款桌墊中自選一款圖案款式。</p>
+      <img src="{{url_for('project.static', filename='img/2022/0b3bd111770022b66de81d2f078984411bef4db1.webp')}}" alt="桌墊" style="width: 100%;">
+    </div>
+
+    <hr class="divider" />
+
+    <div class="col-lg-6 pt-lg-3">
+      <p><b><i class="bi bi-gift-fill"></i>40×60cm掛軸</b></p>
+      <p>由繪師「00魚」繪製。4 款掛軸中自選一款圖案款式。</p>
+      <img src="{{url_for('project.static', filename='img/2022/9d261e027fff6d1485301d2fd3e4ca6347dec6ac.webp')}}" alt="掛軸" class="w3-round w3-image" style="width: 100%;">
+    </div>
+
+    <div class="col-lg-6 pt-lg-3 pt-5">
+      <p><b><i class="bi bi-gift-fill"></i>40×60cm掛軸</b></p>
+      <p>由繪師「鯊魚咬尾巴」繪製。4 款掛軸中自選一款圖案款式。</p>
+      <img src="{{url_for('project.static', filename='img/2022/7165e8711a48c05cbd56a03d0e8f587b02e7bfbf.webp')}}" alt="掛軸" class="w3-round w3-image" style="width: 100%;">
+    </div>
+
+    <div class="col-lg-6 pt-lg-3 pt-5">
+      <p><b><i class="bi bi-gift-fill"></i>40×60cm掛軸</b></p>
+      <p>由繪師「hirotaka」繪製。4 款掛軸中自選一款圖案款式。</p>
+      <img src="{{url_for('project.static', filename='img/2022/03331337413995e7e019662443b67d249c4b5d4c.webp')}}" alt="掛軸" class="w3-round w3-image" style="width: 100%;">
+    </div>
+
+    <div class="col-lg-6 pt-lg-3 pt-5">
+      <p><b><i class="bi bi-gift-fill"></i>40×60cm掛軸</b></p>
+      <p>由繪師「たま・TAMA」繪製。4 款掛軸中自選一款圖案款式。</p>
+      <img src="{{url_for('project.static', filename='img/2022/8e7fbe4e1fe416b07446120a8203400e29706432.webp')}}" alt="掛軸" class="w3-round w3-image" style="width: 100%;">
+    </div>
+  </section> <!-- section#rewardGifts -->
+</div> <!-- div.contanier -->
+<!-- IMAGE MODAL -->
+<div class="modal fade" id="imageModal" role="dialog">
+  <div class="modal-xl modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h3 class="modal-title" id="caption"></h3>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img id="image" style="width: 100%; object-position: left;">
+      </div>
+    </div>
+  </div>
+</div> <!-- #imageModal -->
+{% endblock content %}
+
+{% block scripts %}
+<script>
+  function showModal(element) {
+    $("#image").attr("src", element.src)
+    $("#caption").text(element.alt)
+    $("#imageModal").modal("show")
+  }
+</script>
+{% endblock scripts %}

@@ -1,0 +1,33 @@
+{% extends "base_one_page.html" %}
+
+{% block title %}500 {{ _("內部伺服器錯誤") }}{% endblock title %}
+
+{% block stylesheets %}
+<style>
+  img {
+    filter: brightness(80%);
+  }
+
+  @media (min-width: 992px) {
+    img {
+      height: 50vh;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 991.99px) {
+    img {
+      height: auto;
+      width: 90%;
+    }
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="m-auto text-center">
+  <img src="/static/img/cbb472093e6147d4b5dac97c0072d0d95a8d654a.webp" alt="404 NOT FOUND" style="height: 50vh; filter: brightness(80%);" />
+  <h1 style="color: #F2F2F2;">{{ _("抱歉出錯了") }}</h1>
+  <a class="btn btn-dark fs-3" href="{{ url_for("home.home") }}">{{ _("回首頁") }}</a>
+</div>
+{% endblock content %}

@@ -1,0 +1,25 @@
+{% if projects %}
+  {% for project in projects %}
+    {% if today > project.DateEnd %}
+      <p class="lead">
+        <span class="badge bg-secondary">{{ _("已結束") }}</span> {{ project.DetailedName }}
+        <br class="d-block d-lg-none" />
+        <span class="ms-1"><small class="text-muted">({{ project.DateStart }} ~ {{project.DateEnd}})</small></span>
+      </p>
+    {% elif today > project.DateStart %}
+      <p class="lead">
+        <span class="badge text-bg-success">{{ _("進行中") }}</span> {{ project.DetailedName }}
+        <br class="d-block d-lg-none" />
+        <span class="ms-1"><small class="text-muted">({{ project.DateStart }} ~ {{project.DateEnd}})</small></span>
+      </p>
+    {% else %}
+      <p class="lead">
+        <span class="badge text-bg-warning">{{ _("籌劃中") }}</span> {{ project.Name }}
+        <br class="d-block d-lg-none" />
+        <span class="ms-1"><small class="text-muted">({{ project.DateStart }} ~ {{project.DateEnd}})</small></span>
+      </p>
+    {% endif %}
+  {% endfor %}
+{% else %}
+<p class="lead">{{ _("沒有近期主辦企劃") }}</p>
+{% endif %}

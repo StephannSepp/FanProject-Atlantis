@@ -1,0 +1,58 @@
+/* INTRO HEADER
+	============ */
+
+.intro {
+	height: 100vh;
+	user-select: none;
+	-webkit-user-select: none; /* Safari */
+	-ms-user-select: none; /* IE 10 and IE 11 */
+}
+	.intro .title {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		color: #F2F2F2;
+		font-size: 8vw;
+		font-weight: bold;
+		text-transform: uppercase;
+		text-align: center;
+		align-items: center;
+		justify-content: center;
+		padding-top: 30vh;
+		animation: glow 2s ease-in-out infinite alternate;
+		-webkit-text-stroke: 1px #181818;
+		z-index: 1000;
+	}
+
+	.intro .footer {
+		display: flex;
+		height: 100%;
+		width: 100%;
+		position: absolute;
+		color: #F2F2F2;
+		text-align: center;
+		align-items: end;
+		justify-content: center;
+	}
+
+	.intro img {
+		height: 100%;
+		width: 100%;
+		object-fit: cover;
+		object-position: 60%;
+	}
+
+
+/* Glow title animation */
+@keyframes glow {
+	from {
+		text-shadow: 0 0 30px #181818;
+	}
+
+	to {
+		text-shadow: 0 0 30px #5CB8E4, 0 0 20px #4dbbc7;
+	}
+}
+/* ============
+	END OF INTRO */

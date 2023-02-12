@@ -1,0 +1,45 @@
+﻿{% extends "base_one_page.html" %}
+
+{% block content %}
+<div class="modal" id="resultModal" tabindex="-1">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-body" id="modalBody">
+        <!--MODAL MESSAGE-->
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">好</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="contain-fluid">
+  <form method="POST">
+    <span>
+      第一張牌為
+      <input class="form-control-plaintext" name="firstCard" value="{{first_card}}" readonly />
+      <input class="form-control-plaintext" name="firstCardValue" value="{{first_card_value}}" hidden />
+    </span><br />
+    <input class="btn btn-primary" type="submit" name="guess" value="大" />
+    <input class="btn btn-primary" type="submit" name="guess" value="小" />
+  </form>
+  <hr>
+  <div class="pt-3">
+    <a class="btn btn-primary" href="{{url_for('home.home')}}">玩膩了，回首頁</a>
+  </div>
+</div>
+{% endblock content %}
+
+{% block scripts %}
+{% with messages = get_flashed_messages() %}
+{% if messages %}
+{% for message in messages %}
+<script>
+  $("#modalBody").text("{{message}}")
+  new bootstrap.Modal($('#resultModal')).show();
+</script>
+{% endfor %}
+{% endif %}
+{% endwith %}
+{% endblock scripts %}

@@ -1,0 +1,33 @@
+{% extends "base_one_page.html" %}
+
+{% block title %}404 {{ _("找不到網頁") }}{% endblock title %}
+
+{% block stylesheets %}
+<style>
+  img {
+    filter: brightness(80%);
+  }
+
+  @media (min-width: 992px) {
+    img {
+      height: 50vh;
+      width: auto;
+    }
+  }
+
+  @media (max-width: 991.99px) {
+    img {
+      height: auto;
+      width: 90%;
+    }
+  }
+</style>
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="text-center">
+  <img src="/static/img/d82f312ba8b1c65b6fc636d6fcb0749db468c3d6.webp" alt="404 NOT FOUND" />
+  <h1 style="color: #F2F2F2;">{{ _("哎！我們好像沒這個網頁") }}</h1>
+  <a class="btn btn-dark fs-3" href="{{ url_for("home.home") }}">{{ _("回首頁") }}</a>
+</div>
+{% endblock content %}

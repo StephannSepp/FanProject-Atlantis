@@ -1,0 +1,196 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _("關於我們") }}{% endblock title %}
+
+{% block meta %}
+<meta property="og:title" content="關於我們 - 亞特蘭提斯企劃組">
+<meta property="og:description" content="亞特蘭提斯企劃組...亞特蘭提斯企劃組是由 Hololive English -Myth- 旗下的 Vtuber 藝人 Gawr Gura 粉絲 Discord 群「🔱亞特蘭提斯🦈」組成的活動企劃組。">
+{% endblock meta %}
+
+{% block stylesheets %}
+<link href="{{url_for('home.static', filename='css/about.css')}}" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+<div id="aboutCarousel" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="0" class="active" aria-current="true"></button>
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="2"></button>
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="3"></button>
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="4"></button>
+    <button type="button" data-bs-target="#aboutCarousel" data-bs-slide-to="5"></button>
+  </div>
+
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="{{url_for('project.static', filename='img/2022/ee9e2a9f65ba49dd405c735e8c2bafaeb55d3e49.webp')}}" loading="lazy" />
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <span class="h5 stroke-dark">{{ _("2022 Gawr Gura 生日公車活動") }}</span><br />
+          <span class="h1 stroke-dark">{{ _("高雄") }} 90 {{ _("車門側") }}</span><br />
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1333212491841630212/w3CagKjb_400x400.jpg" style="height: 5em; width: 5em;" loading="lazy" focusable="false" />
+            <span class="p-3 stroke-dark h5">
+              {{ _("繪師") }}：鯊魚咬尾巴<br />
+              <a class="bi bi-twitter stroke-light" href="https://twitter.com/SharkBiteTail" target="_blank" style="color: #1DA1F2;"></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> <!-- div.carousel-item -->
+    <div class="carousel-item">
+      <img src="{{url_for('project.static', filename='img/2022/5f7bca1ea8f6950c1a2d4d674d2871fdb5ba8741.webp')}}" style="object-position: 35% 60%;" loading="lazy" />
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <span class="h5 stroke-dark">{{ _("2022 Gawr Gura 生日公車活動") }}</span><br />
+          <span class="h1 stroke-dark">{{ _("高雄") }} 90 {{ _("司機側") }}</span><br />
+          <div class="d-flex align-items-center">
+            <svg class="rounded-circle" role="img" style="height: 5em; width: 5em;" focusable="false"><rect width="100%" height="100%" fill="#5CB8E4" /></svg>
+            <span class="p-3 stroke-dark h5">
+              {{ _("繪師") }}：たま・TAMA<br />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> <!-- div.carousel-item -->
+    <div class="carousel-item">
+      <img src="{{url_for('project.static', filename='img/2022/8b3ca6b46667571b2ff406c4391cfec25f7c635d.webp')}}" style="object-position: 50% 60%;" loading="lazy" />
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <span class="h5 stroke-dark">{{ _("2022 Gawr Gura 生日公車活動") }}</span><br />
+          <span class="h1 stroke-dark">{{ _("台中") }} 33 {{ _("車門側") }}</span><br />
+          <div class="d-flex align-items-center">
+            <svg class="rounded-circle" role="img" style="height: 5em; width: 5em;" focusable="false"><rect width="100%" height="100%" fill="#5CB8E4" /></svg>
+            <span class="p-3 stroke-dark h5">
+              {{ _("繪師") }}：たま・TAMA<br />
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> <!-- div.carousel-item -->
+    <div class="carousel-item">
+      <img src="{{url_for('project.static', filename='img/2022/955b05173dfee4a449e4c1c260bf73ef2b9d7c15.webp')}}" style="object-position: 50% 60%;" loading="lazy" />
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <span class="h5 stroke-dark">{{ _("2022 Gawr Gura 生日公車活動") }}</span><br />
+          <span class="h1 stroke-dark">{{ _("高雄") }} 90 {{ _("車門側") }}</span><br />
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1609034921225650177/88oav8eN_400x400.jpg" style="height: 5em; width: 5em;" loading="lazy" focusable="false" />
+            <span class="p-3 stroke-dark h5">
+              {{ _("繪師") }}：00魚<br />
+              <a class="bi bi-twitter stroke-light" href="https://twitter.com/lydia601303041" target="_blank" style="color: #1DA1F2;"></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> <!-- div.carousel-item -->
+    <div class="carousel-item">
+      <img src="{{url_for('project.static', filename='img/2022/f72c8b76d36d8d0ac4e7fa0ba13cbf24b35aaab1.webp')}}" style="object-position: 40% 60%;" loading="lazy" />
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <span class="h5 stroke-dark">{{ _("2022 Gawr Gura 生日公車活動") }}</span><br />
+          <span class="h1 stroke-dark">{{ _("台中") }} 35 {{ _("司機側") }}</span><br />
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1609034921225650177/88oav8eN_400x400.jpg" style="height: 5em; width: 5em;" focusable="false" loading="lazy" />
+            <span class="p-3 stroke-dark h5">
+              {{ _("繪師") }}：00魚<br />
+              <a class="bi bi-twitter stroke-light" href="https://twitter.com/lydia601303041" target="_blank" style="color: #1DA1F2;"></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> <!-- div.carousel-item -->
+    <div class="carousel-item">
+      <img src="{{url_for('project.static', filename='img/2022/19b0e1c010646c2ed6c0339aec6ee42a1e64d701.webp')}}" style="object-position: 55% 55%;" loading="lazy" />
+      <div class="container">
+        <div class="carousel-caption text-start">
+          <span class="h5 stroke-dark">{{ _("2022 Gawr Gura 生日公車活動") }}</span><br />
+          <span class="h1 stroke-dark">{{ _("台中") }} 35 {{ _("車門側") }}</span><br />
+          <div class="d-flex align-items-center">
+            <img class="rounded-circle" src="https://pbs.twimg.com/profile_images/1623190901416939523/QzbhH4Ng_400x400.jpg" style="height: 5em; width: 5em;" loading="lazy" focusable="false" />
+            <span class="p-3 stroke-dark h5">
+              {{ _("繪師") }}：hirotaka<br />
+              <a class="bi bi-twitter stroke-light" href="https://twitter.com/hirotaka0125" target="_blank" style="color: #1DA1F2;"></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div> <!-- div.carousel-item -->
+  </div> <!-- div.carousel-inner -->
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#aboutCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#aboutCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div> <!-- #aboutCarousel.arousel .slide -->
+
+<div class="container pt-5">
+  <div class="row">
+    <div class="col-lg-8 mb-3">
+      <h2 class="featurette-header fw-normal lh-1 mb-3"><i class="bi bi-patch-question-fill me-1 d-lg-none d-inline"></i>{{ _("我們是誰？") }}</h2>
+      <p>
+        {{ _("起初，我們只是跟普通粉絲們一樣喜歡著鯊鯊，直到我們見到了第一次的海外粉絲們籌劃的生日慶祝活動，甚至看到了鯊鯊的感動與淚水，這時我們才意識到：「如果海外粉絲能做到，我們也能做到。」我們的目標是要讓鯊鯊知道有這麼一群人支持著她，並與她一起創造種種回憶。") }}
+      </p>
+      <p>
+        {{ _("當然，企劃的推動總要有人付諸行動，我們在 Gura 的第二次生日上踏出了第一步。當時，我們對這些事情還是一知半解，但我們還是成功地完成了公車廣告的慶祝企劃，也讓鯊鯊看見了我們粉絲們的努力成果。即使第一次籌劃中有許多不足之處，但我們願意虛心學習並繼續付出，往後的活動企畫也請各位多多指教和協助。") }}
+      </p>
+    </div>
+    <div class="col-lg-4 d-lg-block d-none text-center" style="font-size: 10em; color: var(--theme-secondary); ">
+      <i class="bi bi-patch-question-fill"></i>
+    </div>
+    <div class="col-lg-4 d-lg-block d-none text-center" style="font-size: 10em; color: var(--theme-secondary); ">
+      <i class="bi bi-balloon-heart"></i>
+    </div>
+    <div class="col-lg-8 mb-3 ms-lg-auto">
+      <h2 class="featurette-header fw-normal lh-1 mb-3"><i class="bi bi-balloon-heart me-1 d-lg-none d-inline"></i>{{ _("主辦企劃") }}</h2>
+      <div id="recentProjects">
+        <div class="spinner spinner-border m-5" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+      </div>
+    </div>
+  </div> <!-- div.row -->
+
+  <hr class="featurette-divider" />
+
+  <div class="row text-center">
+    <h1>{{ _("企劃組核心成員") }}</h1>
+  </div>
+  <div class="row">
+    <div class="col-lg-4 text-center pt-5">
+      <img class="rounded-circle" src="https://cdn.discordapp.com/avatars/407063351072653313/a_f541e1243a91a599414a4bdcb7c16f83.gif" loading="lazy" focusable="false" />
+      <h2 class="fw-normal">{{ _("企劃主辦人") }}</h2>
+      <i class="bi bi-discord" style="color: #7289D9;">サメ#4015</i>
+    </div> <!-- div.col-lg-4 -->
+    <div class="col-lg-4 text-center pt-5">
+      <img class="rounded-circle" src="https://cdn.discordapp.com/avatars/387573599919276032/a_c69aac81a341b581e97af8c68258f958.gif" loading="lazy" focusable="false" />
+      <h2 class="fw-normal">{{ _("主辦 Discord 群群主") }}</h2>
+      <i class="bi bi-discord" style="color: #7289D9;">林昕渪#1202</i>
+    </div> <!-- div.col-lg-4 -->
+    <div class="col-lg-4 text-center pt-5">
+      <img class="rounded-circle" src="https://cdn.discordapp.com/avatars/443018500345430016/3a326eede9ac599e5e9fd3af54908163.webp" loading="lazy" focusable="false" />
+      <h2 class="fw-normal">{{ _("主辦 Discord 群管理員") }}</h2>
+      <i class="bi bi-discord" style="color: #7289D9;">vic2013614#3905</i>
+    </div> <!-- div.col-lg-4 -->
+  </div> <!-- div.row -->
+</div><!-- div.container .pt-5 -->
+{% endblock content %}
+
+{% block scripts %}
+<script>
+  $(function () {
+    $.ajax("{{ url_for('project.project_api') }}")
+      .done(function (data) {
+        $("#recentProjects").html(data)
+      })
+      .fail(function (jqXHR, textStatus, errorThrown) {
+        console.log(errorThrown)
+      })
+  })
+</script>
+{% endblock scripts%}

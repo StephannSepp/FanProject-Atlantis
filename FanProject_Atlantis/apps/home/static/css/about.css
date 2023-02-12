@@ -1,0 +1,20 @@
+/* FEATURETTES
+============ */
+
+@media (min-width: 992px) {
+	.featurette-divider {
+		margin: 5rem 0;
+	}
+}
+
+@media (max-width: 991.99px) {
+	.featurette-divider {
+		margin: 2.5rem 0;
+	}
+}
+
+.featurette-header {
+	letter-spacing: -.05rem;
+}
+/* ============
+	END OF FEATURETTES */

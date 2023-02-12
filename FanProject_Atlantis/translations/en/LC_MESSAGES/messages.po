@@ -1,0 +1,258 @@
+# English translations for PROJECT.
+# Copyright (C) 2023 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2023-02-13 00:18+0800\n"
+"PO-Revision-Date: 2023-02-08 19:31+0800\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language: en\n"
+"Language-Team: en <LL@li.org>\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.11.0\n"
+
+#: apps/home/templates/about.html:3
+msgid "關於我們"
+msgstr "About Us"
+
+#: apps/home/templates/about.html:30 apps/home/templates/about.html:46
+#: apps/home/templates/about.html:61 apps/home/templates/about.html:76
+#: apps/home/templates/about.html:92 apps/home/templates/about.html:108
+msgid "2022 Gawr Gura 生日公車活動"
+msgstr "Gawr Gura Birthday Bus Project 2022"
+
+#: apps/home/templates/about.html:31 apps/home/templates/about.html:47
+#: apps/home/templates/about.html:77
+msgid "高雄"
+msgstr "Kaohsiung"
+
+#: apps/home/templates/about.html:31 apps/home/templates/about.html:62
+#: apps/home/templates/about.html:77 apps/home/templates/about.html:109
+msgid "車門側"
+msgstr "Door Side"
+
+#: apps/home/templates/about.html:35 apps/home/templates/about.html:51
+#: apps/home/templates/about.html:66 apps/home/templates/about.html:81
+#: apps/home/templates/about.html:97 apps/home/templates/about.html:113
+msgid "繪師"
+msgstr "Artist"
+
+#: apps/home/templates/about.html:47 apps/home/templates/about.html:93
+msgid "司機側"
+msgstr "Driver Side"
+
+#: apps/home/templates/about.html:62 apps/home/templates/about.html:93
+#: apps/home/templates/about.html:109
+msgid "台中"
+msgstr "Taichung"
+
+#: apps/home/templates/about.html:135
+msgid "我們是誰？"
+msgstr "What is Atlantis Fan Project?"
+
+#: apps/home/templates/about.html:137
+msgid "起初，我們只是跟普通粉絲們一樣喜歡著鯊鯊，直到我們見到了第一次的海外粉絲們籌劃的生日慶祝活動，甚至看到了鯊鯊的感動與淚水，這時我們才意識到：「如果海外粉絲能做到，我們也能做到。」我們的目標是要讓鯊鯊知道有這麼一群人支持著她，並與她一起創造種種回憶。"
+msgstr ""
+
+#: apps/home/templates/about.html:140
+msgid ""
+"當然，企劃的推動總要有人付諸行動，我們在 Gura "
+"的第二次生日上踏出了第一步。當時，我們對這些事情還是一知半解，但我們還是成功地完成了公車廣告的慶祝企劃，也讓鯊鯊看見了我們粉絲們的努力成果。即使第一次籌劃中有許多不足之處，但我們願意虛心學習並繼續付出，往後的活動企畫也請各位多多指教和協助。"
+msgstr ""
+
+#: apps/home/templates/about.html:150
+msgid "主辦企劃"
+msgstr "Our Projects"
+
+#: apps/home/templates/about.html:162
+msgid "企劃組核心成員"
+msgstr "Team Core Members"
+
+#: apps/home/templates/about.html:167
+msgid "企劃主辦人"
+msgstr "Project Organiser"
+
+#: apps/home/templates/about.html:172
+msgid "主辦 Discord 群群主"
+msgstr "Discord Fan Server Owner"
+
+#: apps/home/templates/about.html:177
+msgid "主辦 Discord 群管理員"
+msgstr "Discord Fan Server Mod"
+
+#: apps/home/templates/home.html:3 apps/home/templates/home.html:22
+#: templates/base.html:8 templates/base_one_page.html:8
+#: templates/includes/navbar.html:7
+msgid "亞特蘭提斯企劃組"
+msgstr "Atlantis Fan Project"
+
+#: apps/home/templates/home.html:33 apps/home/templates/home.html:34
+#: apps/home/templates/home.html:53 templates/includes/navbar.html:18
+#: templates/includes/navbar.html:19
+msgid "生日企劃"
+msgstr "Birthday Project"
+
+#: apps/home/templates/home.html:44 templates/includes/navbar.html:29
+msgid "登出"
+msgstr "Logout"
+
+#: apps/home/templates/home.html:46 templates/includes/navbar.html:31
+msgid "Discord 登入"
+msgstr "Login via Discord"
+
+#: apps/home/templates/privacy-policy.html:3
+#: apps/home/templates/privacy-policy.html:17 templates/base.html:30
+#: templates/base_home.html:29
+msgid "隱私權政策"
+msgstr "Privacy Policy"
+
+#: apps/home/templates/privacy-policy.html:18
+msgid "隱私權政策適用範圍"
+msgstr "Applicable scope"
+
+#: apps/home/templates/privacy-policy.html:20
+msgid ""
+"隱私權保護政策內容，適用於以「fanproject-"
+"atlantis.com」網域為原則之網站（以下稱本網站）。不適用於經由本網站以外的相關連結網站，也不適用於非本網站所委託或參與管理的人員。"
+msgstr ""
+
+#: apps/home/templates/privacy-policy.html:22
+msgid "資料蒐集、處理及利用方式"
+msgstr ""
+
+#: apps/home/templates/privacy-policy.html:24
+msgid "一般瀏覽之情況：本網站會自動產生相關瀏覽紀錄，包含連線設備 IP 地址、使用時間、使用的瀏覽器及請求的資源。"
+msgstr ""
+
+#: apps/home/templates/privacy-policy.html:25
+msgid ""
+"主動以 Discord 登入之情況：本網站使用 Disocrd OAuth 2.0 API 驗證 Disocrd 帳號，本網站僅記錄使用者 "
+"UID、使用者名稱、頭像作為登入資訊儲存，此登入資訊將於登出網站時自動清除，本網站不會、也不能儲存您在 Disocrd 上的密碼。"
+msgstr ""
+
+#: apps/home/templates/privacy-policy.html:26
+msgid "主動使用本網站留言等功能之情況：本網站會將使用者 UID、使用者名稱、頭像基本資訊儲存至資料庫。"
+msgstr ""
+
+#: apps/home/templates/privacy-policy.html:27
+msgid "活動所需提供個人實名資料之情況：本網站將不會紀錄完整個人資料，資料存入時將自動刪除部分資訊，因活動金流或其他需求會將部分實名資料展示於本網站上，如匯款帳號末五碼及姓名首字等。"
+msgstr ""
+
+#: apps/home/templates/privacy-policy.html:29
+msgid "資料保護"
+msgstr ""
+
+#: apps/home/templates/privacy-policy.html:31
+msgid "本網站之資料僅能由網站管理員及亞特蘭提斯企劃組管理方存取，絕對不會提供、交換、出租或販售至第三方使用。"
+msgstr ""
+
+#: apps/home/templates/privacy-policy.html:33
+msgid "Cookie 使用"
+msgstr "Cookies"
+
+#: apps/home/templates/privacy-policy.html:35
+msgid ""
+"為了提供您最佳的服務，本網站會在您的電腦中放置並取用我們的 Cookie，若您不願接受 Cookie "
+"的寫入，您可在您使用的瀏覽器功能項中設定隱私權等級為高，即可拒絕 Cookie 的寫入，但可能會導致網站某些功能無法正常執行。"
+msgstr ""
+"A cookie is a small computer file or piece of information that may be "
+"stored in your computer's harddrive. We uses cookies to provide a better "
+"online experience for our website. You may change your Internet browser "
+"settings to prevent your computer from accepting cookies. Please note, "
+"however, if you disable cookies, you may not experience optimal "
+"performance of our website."
+
+#: apps/home/templates/privacy-policy.html:37
+msgid "隱私權政策修正"
+msgstr "Updates To The Policy"
+
+#: apps/home/templates/privacy-policy.html:39
+msgid "本網站隱私權保護政策將因應需求隨時進行修正。"
+msgstr "We may amend or update our Privacy Policy."
+
+#: apps/project/templates/2022bday.html:3
+msgid "2022 Gawr Gura 生日公車"
+msgstr "Gawr Gura Birthday Bus Project 2022"
+
+#: apps/project/templates/2023bday.html:3
+msgid "2023 Gawr Gura 生日公車"
+msgstr "Gawr Gura Birthday Bus Project 2023"
+
+#: apps/project/templates/2023bday.html:18
+msgid "企劃概述"
+msgstr "Project Description"
+
+#: apps/project/templates/2023bday.html:19
+msgid "是的!我們又回來了，我們是 2022 年舉辦鯊鯊公車廣告活動的亞特蘭提斯企劃組。"
+msgstr ""
+
+#: apps/project/templates/2023bday.html:20
+msgid "今年度的生日活動我們將擴大規模，擬定彩繪列車作為這次的目標，並將致力邀請知名繪師參與設計。"
+msgstr ""
+
+#: apps/project/templates/2023bday.html:21
+msgid "為了實現如此大規模的活動，需要各位蝦蝦給予支持與鼓勵，我們誠摯邀請來自各地的 Chumbuds 參與這次活動。"
+msgstr ""
+
+#: apps/project/templates/2023bday.html:27
+msgid "企劃現況"
+msgstr "Current State"
+
+#: apps/project/templates/2023bday.html:28
+msgid "意願調查中。"
+msgstr ""
+
+#: apps/project/templates/2023bday.html:37
+msgid "開始籌畫"
+msgstr ""
+
+#: apps/project/templates/2023bday.html:41
+msgid "意願調查"
+msgstr ""
+
+#: apps/project/templates/2023bday.html:42
+msgid "此次意願調查將決定火車企劃是否可行。"
+msgstr ""
+
+#: apps/project/templates/recentProjects.html:5
+msgid "已結束"
+msgstr "Ended"
+
+#: apps/project/templates/recentProjects.html:11
+msgid "進行中"
+msgstr "In Progress"
+
+#: apps/project/templates/recentProjects.html:17
+msgid "籌劃中"
+msgstr "Preparing"
+
+#: apps/project/templates/recentProjects.html:24
+msgid "沒有近期主辦企劃"
+msgstr ""
+
+#: templates/404.html:3
+msgid "找不到網頁"
+msgstr "Page Could Not Be Found"
+
+#: templates/404.html:30
+msgid "哎！我們好像沒這個網頁"
+msgstr "Woops! It looks like we don't have this page. :3"
+
+#: templates/404.html:31 templates/500.html:31
+msgid "回首頁"
+msgstr "Homepage"
+
+#: templates/500.html:3
+msgid "內部伺服器錯誤"
+msgstr "Internal Server Error"
+
+#: templates/500.html:30
+msgid "抱歉出錯了"
+msgstr "Sowwy, we've made a mistake."
