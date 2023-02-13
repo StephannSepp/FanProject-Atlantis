@@ -1,4 +1,5 @@
 import os
+import platform
 
 
 class BaseConfig(object):
@@ -17,16 +18,13 @@ class ProductionConfig(BaseConfig):
     # OAuth Variable
     CLIENT_ID = os.getenv("CLIENT_ID")
     CLIENT_SECRET = os.getenv("CLIENT_SECRET")
-    # SQLAlchemy
-    SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI")
 
-
+    
 class DevelopmentConfig(BaseConfig):
-    # from dotenv import load_dotenv
-    # load_dotenv()
-    SECRET_KEY = os.getenv("SECRET")
-    # OAuth Variable
-    CLIENT_ID = os.getenv("CLIENT_ID")
-    CLIENT_SECRET = os.getenv("CLIENT_SECRET")
-    # SQLAlchemy
-    SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI")
+    if platform.system().capitalize() == "Windows":
+        from dotenv import load_dotenv
+        load_dotenv()
+        SECRET_KEY = os.getenv("SECRET")
+        # OAuth Variable
+        CLIENT_ID = os.getenv("CLIENT_ID")
+        CLIENT_SECRET = os.getenv("CLIENT_SECRET")

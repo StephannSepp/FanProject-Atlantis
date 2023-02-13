@@ -1,11 +1,15 @@
 from importlib import import_module
+
 from flask import Flask
 from flask import render_template
 from flask import request
+
 from . import config
-from .context import inject_today
+from .context import inject_now
+from .context import date_fromisoformate
+from .context import datetime_fromisoformate
 from .models import babel
-from .models import db
+from .models import dynamodb
 from .models import login_manager
 
 
@@ -28,7 +32,10 @@ def create_app(testing=False):
 
     app.config["TEMPLATES_AUTO_RELOAD"] = True
     app.jinja_env.auto_reload = True
-    app.context_processor(inject_today)
+
+    app.context_processor(inject_now)
+    app.add_template_filter(date_fromisoformate)
+    app.add_template_filter(datetime_fromisoformate)
 
     # Register error handlers
     app.errorhandler(404)(lambda e: (render_template("404.html"), 404))
@@ -36,6 +43,5 @@ def create_app(testing=False):
 
     babel.init_app(app, locale_selector=get_locale)
     login_manager.init_app(app)
-    db.init_app(app)
     register_blueprints(app)
     return app

@@ -1,22 +1,22 @@
 {% if projects %}
   {% for project in projects %}
-    {% if today > project.DateEnd %}
+    {% if now > project.date_end | datetime_fromisoformate %}
       <p class="lead">
-        <span class="badge bg-secondary">{{ _("已結束") }}</span> {{ project.DetailedName }}
+        <span class="badge bg-secondary">{{ _("已結束") }}</span> {{ project.detailed_name }}
         <br class="d-block d-lg-none" />
-        <span class="ms-1"><small class="text-muted">({{ project.DateStart }} ~ {{project.DateEnd}})</small></span>
+        <span class="ms-1"><small class="text-muted">({{ project.date_start | date_fromisoformate }} ~ {{ project.date_end | date_fromisoformate }})</small></span>
       </p>
-    {% elif today > project.DateStart %}
+    {% elif now > project.date_start | datetime_fromisoformate %}
       <p class="lead">
-        <span class="badge text-bg-success">{{ _("進行中") }}</span> {{ project.DetailedName }}
+        <span class="badge text-bg-success">{{ _("進行中") }}</span> {{ project.detailed_name }}
         <br class="d-block d-lg-none" />
-        <span class="ms-1"><small class="text-muted">({{ project.DateStart }} ~ {{project.DateEnd}})</small></span>
+        <span class="ms-1"><small class="text-muted">({{ project.date_start | date_fromisoformate }} ~ {{ project.date_end | date_fromisoformate }})</small></span>
       </p>
     {% else %}
       <p class="lead">
-        <span class="badge text-bg-warning">{{ _("籌劃中") }}</span> {{ project.Name }}
+        <span class="badge text-bg-warning">{{ _("籌劃中") }}</span> {{ project.project_name }}
         <br class="d-block d-lg-none" />
-        <span class="ms-1"><small class="text-muted">({{ project.DateStart }} ~ {{project.DateEnd}})</small></span>
+        <span class="ms-1"><small class="text-muted">({{ project.date_start | date_fromisoformate }} ~ {{ project.date_end | date_fromisoformate }})</small></span>
       </p>
     {% endif %}
   {% endfor %}

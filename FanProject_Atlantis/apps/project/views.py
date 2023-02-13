@@ -1,17 +1,23 @@
-﻿from flask import render_template
+﻿from botocore.exceptions import ClientError
+from flask import render_template
 from . import blueprint
-from . import Project
-from FanProject_Atlantis import db
+from FanProject_Atlantis import dynamodb
 
 
 @blueprint.route("/api", methods=["GET"])
 def project_api():
     try:
-        projects = db.session.execute(db.select(Project).order_by(Project.DateStart.desc()).limit(5)).scalars().all()
-    except Exception as exce:
-        # :TODO: exception handling
-        print(exce)
+        resp = dynamodb.Table("Projects").scan(
+            Limit=5,
+            AttributesToGet=[
+                "project_name", "detailed_name", "date_start", "date_end"
+            ]
+        )
+    except ClientError as exce:
+        assert exce.response["Error"]["Code"] == "ResourceNotFoundException"
         projects = None
+    else:
+        projects = resp["Items"]
 
     return render_template("recentProjects.html", projects=projects)
 

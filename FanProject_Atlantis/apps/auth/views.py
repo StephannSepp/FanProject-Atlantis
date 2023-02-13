@@ -49,7 +49,11 @@ def oauth_callback():
     if session.get("oauth_state") is None:
         abort(400)
 
-    discord_oauth = OAuth2Session(current_app.config["CLIENT_ID"], redirect_uri=url_for("auth.oauth_callback", _external=True), state=session["oauth_state"])
+    discord_oauth = OAuth2Session(
+        current_app.config["CLIENT_ID"],
+        redirect_uri=url_for("auth.oauth_callback", _external=True),
+        state=session["oauth_state"]
+    )
     token = discord_oauth.fetch_token(
         TOKEN_URL,
         client_secret=current_app.config["CLIENT_SECRET"],
@@ -57,9 +61,6 @@ def oauth_callback():
     )
     session["oauth_token"] = token
     discord_user = discord_oauth.get("https://discord.com/api/users/@me").json()
-    print(discord_user)
-    guild_user = discord_oauth.get("https://discord.com/api/users/@me/guilds/740908503585259553/member").json()
-    print(guild_user)
     user_info = {
         "discord_id": discord_user["id"],
         "discord_username": discord_user["username"],
