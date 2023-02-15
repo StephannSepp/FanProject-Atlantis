@@ -4,7 +4,7 @@
 
 {% block meta %}
 <meta property="og:title" content="亞特蘭提斯企劃組">
-<meta property="og:description" content="亞特蘭提斯企劃組...亞特蘭提斯企劃組是由 Hololive English -Myth- 旗下的 Vtuber 藝人 Gawr Gura 粉絲 Discord 群「🔱亞特蘭提斯🦈」組成的活動企劃組。">
+<meta property="og:description" content="亞特蘭提斯企劃組...亞特蘭提斯企劃組是由 Gawr Gura 粉絲 Discord 群組「🔱亞特蘭提斯🦈」組成的活動企劃組，主要為 Hololive English -Myth- 旗下藝人 Gawr Gura 舉辦各式各樣的推廣活動，所有活動皆為粉絲自發性活動，並無營利性質。">
 {% endblock meta %}
 
 {% block stylesheets %}
@@ -67,5 +67,13 @@
 {% endblock content %}
 
 {% block scripts %}
-<script src="{{url_for('home.static', filename='js/home.js')}}"></script>
+<script>
+  $(window).on('scroll', function () {
+    if ($(window).scrollTop()) {
+      $('nav').addClass('dark')
+    } else {
+      $('nav').removeClass('dark')
+    }
+  })
+</script>
 {% endblock scripts %}

@@ -2,7 +2,7 @@ import datetime
 import pytz
 
 
-def inject_now():
+def inject_variables():
     return {"now": datetime.datetime.now(tz=pytz.timezone("Asia/Taipei"))}
 
 

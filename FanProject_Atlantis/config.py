@@ -24,7 +24,8 @@ class DevelopmentConfig(BaseConfig):
     if platform.system().capitalize() == "Windows":
         from dotenv import load_dotenv
         load_dotenv()
-        SECRET_KEY = os.getenv("SECRET")
-        # OAuth Variable
-        CLIENT_ID = os.getenv("CLIENT_ID")
-        CLIENT_SECRET = os.getenv("CLIENT_SECRET")
+
+    SECRET_KEY = os.getenv("SECRET")
+    # OAuth Variable
+    CLIENT_ID = os.getenv("CLIENT_ID")
+    CLIENT_SECRET = os.getenv("CLIENT_SECRET")

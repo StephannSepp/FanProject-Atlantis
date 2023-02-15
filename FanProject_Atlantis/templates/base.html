@@ -14,7 +14,9 @@
 </head>
 <body class="base">
   {% include "includes/navbar.html" %}
-  {% include "components/scrollIndicator.html" %}
+  <div class="progress scrollProgressBar fixed-top">
+    <div class="progress-bar" role="progressbar" id="scrollProgressBar"></div>
+  </div>
   <main>
     {% block content %}{% endblock content %}
   </main>
