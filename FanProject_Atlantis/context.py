@@ -3,7 +3,7 @@ import pytz
 
 
 def inject_variables():
-    return {"now": datetime.datetime.now(tz=pytz.timezone("Asia/Taipei"))}
+    return {"utcnow": datetime.datetime.now(tz=pytz.UTC)}
 
 
 def datetime_fromisoformate(datetime_string: str) -> datetime.datetime:
