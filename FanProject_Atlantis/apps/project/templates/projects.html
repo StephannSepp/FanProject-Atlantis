@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}{{ _("企劃列表") }}{% endblock title %}
+
+{% block meta %}
+<meta property="og:title" content="企劃列表">
+<meta property="og:description" content="由亞特蘭提斯企劃組所舉辦的 Gawr Gura 推廣企劃的頁面...亞特蘭提斯企劃組是由 Gawr Gura 粉絲 Discord 群組「🔱亞特蘭提斯🦈」組成的活動企劃組。">
+{% endblock meta %}
+
+{% block stylesheets %}
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="container-lg container-fluid pt-4">
+  <div class="row justify-content-center">
+    {% if projects %}
+      {% for project in projects %}
+        <div class="col-lg-4 col-12 px-5 py-3">
+          <div class="card">
+            <div class="card-body">
+              <h5 class="card-title">
+                {{ project.detailed_name or project.project_name }}
+                {% if utcnow > project["date_end"] %}
+                  <span class="badge bg-secondary float-end"> {{ _("已結束") }}</span>
+                {% elif utcnow > project["date_start"] %}
+                  <span class="badge text-bg-success float-end"> {{ _("進行中") }}</span>
+                {% else %}
+                  <span class="badge text-bg-warning float-end"> {{ _("籌劃中") }}</span>
+                {% endif %}
+              </h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{ project["date_start"] | dateformat }} ~ {{ project["date_end"] | dateformat }}</h6>
+              <p class="card-text">活動敘述在這裡</p>
+              <p class="card-text">這些將會是固定格式自動生成的頁面</p>
+              <a href="{{ url_for('project.project_page', project_id=project.project_id) }}" class="btn btn-theme card-link">{{ _("活動頁面") }}</a>
+            </div>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div> <!-- div.row -->
+</div> <!-- div.contanier -->
+{% endblock content %}

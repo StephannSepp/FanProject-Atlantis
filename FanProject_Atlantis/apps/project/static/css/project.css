@@ -10,10 +10,6 @@
   transition: opacity 0.5s;
 }
 
-.divider {
-  margin: 2.5rem 0;
-}
-
 .progress .progress-bar {
   animation-name: animatedBar;
   animation-iteration-count: 1;
