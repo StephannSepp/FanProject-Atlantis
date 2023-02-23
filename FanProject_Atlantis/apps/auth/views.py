@@ -22,14 +22,6 @@ AUTHORIZE_URL = "https://discordapp.com/api/oauth2/authorize"
 SCOPE = ["identify", "guilds"]
 
 
-@blueprint.route("/")
-def index():
-    """ Test page """
-    if current_user.is_authenticated:
-        return f"Hello, {current_user.username}!<img src='https://cdn.discordapp.com/avatars/{current_user.id}/{current_user.avatar}' alt='Discord Avatar' \>"
-    return "Hello, Anonymous!"
-
-
 @blueprint.route("/login")
 def login():
     discord_oauth = OAuth2Session(current_app.config["CLIENT_ID"], redirect_uri=url_for("auth.oauth_callback", _external=True), scope=SCOPE)
