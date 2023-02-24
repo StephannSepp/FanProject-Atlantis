@@ -9,24 +9,31 @@ from . import blueprint
 from FanProject_Atlantis import firebase
 
 
-@cached(cache=TTLCache(maxsize=8, ttl=600))
-def get_projects(limit=None) -> list:
+@cached(cache=TTLCache(maxsize=8, ttl=3600))
+def get_projects(limit=None, project_id=None) -> list:
     projects_ref = firebase.collection("projects")
-    docs = projects_ref.order_by("date_start", direction=firestore.Query.DESCENDING).limit(limit).get()
-    projects = [doc.to_dict() for doc in docs]
-    return projects
+
+    if project_id is None:
+        docs = projects_ref.order_by("date_start", direction=firestore.Query.DESCENDING).limit(limit).get()
+        projects = [doc.to_dict() for doc in docs]
+        return projects
+
+    project = projects_ref.document(project_id).get().to_dict()
+    return project
 
 
 @blueprint.route("/api", methods=["GET"])
-def project_api():
-    try:
-        projects = get_projects(limit=5)
-    except Exception as exce:
-        # TODO: error handling
-        print(exce)
-        projects = None
+@blueprint.route("/api/<project_id>", methods=["GET"])
+def project_api(project_id: str=None):
+    if project_id is None:
+        try:
+            projects = get_projects(limit=5)
+        except Exception as exce:
+            # TODO: error handling
+            print(exce)
+            projects = None
 
-    return render_template("recentProjects.html", projects=projects)
+        return render_template("recentProjects.html", projects=projects)
 
 
 @blueprint.route("/")
@@ -41,12 +48,10 @@ def project_page(project_id: str=None):
             projects = None
         return render_template("projects.html", projects=projects)
 
-    try:
-        return render_template(f"{project_id}.html")
-    except Exception as exec:
-        # TODO: error handling
-        print(exec)
-        abort(404)
+    project = get_projects(project_id=project_id)
+    #header = contents["header"].get().to_dict()
+    #timelines = contents["timeline"].get().to_dict()
+    return render_template(f"project.html", project=project)
 
 
 @blueprint.route("/gawr-gura-birthday-2022")

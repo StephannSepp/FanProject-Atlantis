@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block title %}{{ project.detailed_name }}{% endblock title %}
+
+{% block stylesheets %}
+<link href="/static/css/timeline.css" rel="stylesheet" />
+<link href="{{url_for('project.static', filename='css/project.css')}}" rel="stylesheet" />
+{% endblock stylesheets %}
+
+{% block content %}
+<div class="container-lg container-fluid pt-4">
+  <section class="row text-center" id="description">
+    {% if project.contents %}
+    <h1 class="text-center fw-bold">企劃概述</h1>
+      {% for content in project.contents.description %}
+        <p>{{ content }}</p>
+      {% endfor %}
+    {% else %}
+      <h1>Working in Progress.</h1>
+    {% endif %}
+  </section> <!-- section#description.row -->
+
+  <hr class="hr-edge-fade my-5" />
+
+  {% if project.timeline %}
+  <section class="text-center" id="state">
+    <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#timelines">點我展開時間軸</button>
+    <div class="container pt-3 text-start collapse" id="timelines">
+      <div class="row">
+        <div class="col-lg-8 mx-auto">
+          <ul class="timeline">
+            {% for title, timeline in project.timeline.items() %}
+            <li class="timeline-item rounded ms-3 p-4 shadow">
+              <div class="text-brand-blue timeline-arrow"></div>
+              <h2 class="h5 mb-0 fw-bold">{{ title }}</h2><span class="small text-muted"><i class="bi bi-calendar4-week me-1"></i>{{ timeline.date | dateformat }}</span>
+              {% for item in timeline.description %}
+              <p class="text-small mt-2">{{ item | safe }}</p>
+              {% endfor %}
+            </li>
+            {% endfor %}
+          </ul>
+        </div> <!-- div.col-8.mx-auto -->
+      </div> <!-- div.row -->
+    </div> <!-- div#timelines -->
+  </section> <!-- section#state -->
+  <hr class="hr-edge-fade my-5" />
+  {% endif %}
+</div> <!-- div.contanier -->
+{% endblock content %}
