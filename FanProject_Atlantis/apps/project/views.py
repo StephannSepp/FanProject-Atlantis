@@ -18,8 +18,11 @@ def get_projects(limit=None, project_id=None) -> list:
         projects = [doc.to_dict() for doc in docs]
         return projects
 
-    project = projects_ref.document(project_id).get().to_dict()
-    return project
+    project = projects_ref.document(project_id).get()
+    if not project.exists:
+        abort(404)
+
+    return project.to_dict()
 
 
 @blueprint.route("/api", methods=["GET"])
@@ -49,8 +52,6 @@ def project_page(project_id: str=None):
         return render_template("projects.html", projects=projects)
 
     project = get_projects(project_id=project_id)
-    #header = contents["header"].get().to_dict()
-    #timelines = contents["timeline"].get().to_dict()
     return render_template(f"project.html", project=project)
 
 
